@@ -250,17 +250,3 @@ if processor.connect():
 | Traffic officer deployment | 30% efficiency improvement |
 
 ---
-
-## License
-
-This project is developed for the hackathon competition and is available under the MIT License.
-
----
-
-## Team
-
-Developed with a focus on real-world deployment and measurable urban impact.
-
-## 📝 License
-
-MIT License - see LICENSE file for details.
