@@ -88,7 +88,7 @@ Urban traffic congestion costs economies billions annually in lost productivity,
 ## Project Structure
 
 ```
-IIC/
+traffic-optimizer/
 ├── app.py                      # Main Streamlit dashboard (1400+ lines)
 ├── config.py                   # Centralized configuration management
 ├── requirements.txt            # Dependency specifications
