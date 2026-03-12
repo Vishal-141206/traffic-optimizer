@@ -1,50 +1,28 @@
 {
   "name": "Traffic Flow Optimizer",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
-  "workspaceFolder": "/workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.11"
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    }
+    "ghcr.io/devcontainers/features/common-utils:2": {}
   },
-  "forwardPorts": [5173, 8000, 5432, 6379],
+  "forwardPorts": [8501],
   "portsAttributes": {
-    "5173": {
-      "label": "Frontend",
+    "8501": {
+      "label": "Streamlit Dashboard",
       "onAutoForward": "openBrowser"
-    },
-    "8000": {
-      "label": "Backend API",
-      "onAutoForward": "notify"
-    },
-    "5432": {
-      "label": "PostgreSQL",
-      "onAutoForward": "silent"
-    },
-    "6379": {
-      "label": "Redis",
-      "onAutoForward": "silent"
     }
   },
-  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+  "postStartCommand": "echo '✅ Run: streamlit run app.py'",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss",
-        "ms-azuretools.vscode-docker"
+        "ms-toolsai.jupyter"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/workspace/backend/venv/bin/python",
-        "python.formatting.provider": "black",
-        "editor.formatOnSave": true
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.provider": "black"
       }
     }
   }
