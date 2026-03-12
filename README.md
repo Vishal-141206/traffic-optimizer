@@ -89,7 +89,7 @@ Urban traffic congestion costs economies billions annually in lost productivity,
 
 ```
 traffic-optimizer/
-├── app.py                      # Main Streamlit dashboard (1400+ lines)
+├── app.py                      # Main Streamlit dashboard
 ├── config.py                   # Centralized configuration management
 ├── requirements.txt            # Dependency specifications
 │
@@ -248,5 +248,3 @@ if processor.connect():
 | Fuel consumption | 15-20% reduction through reduced idling |
 | Carbon emissions | Proportional reduction to fuel savings |
 | Traffic officer deployment | 30% efficiency improvement |
-
----
